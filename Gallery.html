@@ -1,129 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-/* Modern Photo Gallery CSS */
+      /* Modern Photo Gallery CSS */
 
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+      /* Gallery Container */
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 10%;
+        max-width: 85%;
+        margin: 5px auto;
+      }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
+      /* Gallery Item */
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
-/* Gallery Container */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 20px;
-    max-width: 100%;
-    margin: 0 auto;
-}
+      .gallery-item:hover {
+        transform: scale(2);
+        box-shadow: 0 8px 16px rgba(255, 0, 0, 0.2);
+      }
 
-/* Gallery Item */
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+      .gallery-item:hover img {
+        width: 100%;
+      }
+      /* Responsive Design */
+      @media (max-width: 100%) {
+        .gallery {
+          grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+        }
+      }
 
-.gallery-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
+      @media (max-width: 100%) {
+        .gallery {
+          grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+        }
+      }
 
-/* Gallery Image */
-.gallery-item img {
-    width: 25%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    transition: opacity 0.3s ease;
-}
+      .navbar {
+        bottom: 1px;
+        position: sticky;
+        background-color: aliceblue;
+        text-align: center;
+        font-size: xx-large;
+      }
 
-.gallery-item:hover img {
-    opacity: 0.9;
-}
-
-/* Overlay */
-.gallery-item .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 10px;
-}
-
-.gallery-item:hover .overlay {
-    opacity: 1;
-}
-
-/* Overlay Text */
-.overlay h3 {
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 25%) {
-    .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
-    }
-}
-
-@media (max-width: 25%) {
-    .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
-    }
-}  
-
-</style>
-</head>
-<body class="gallery">
-    <main>
-        <img 
+      .navbar a {
+        border: 1px solid;
+        margin: 5px;
+        padding: 2px;
+        background-color: rgba(100, 58, 4, 0.664);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="gallery">
+      <img
         class="gallery-item"
         src="pexels-r-khalil-250162-775707.jpg"
         width="45%"
-        >
-        <img 
+      />
+      <img
         class="gallery-item"
         src="pexels-pedrofurtadoo-30500759.jpg"
         width="45%"
         alt="Bean Fries"
-        >
+      />
+      <img
+        class="gallery-item"
+        src="1tghikuq.bmp"
+        width="45%"
+        alt="Bean Fries"
+      />
     </main>
-</body>
+  </body>
 
-<footer>
-    <nav>
+  <footer>
+    <nav class="navbar">
       <a href="index.html"> HOME </a>
       <a href="About.html"> ABOUT </a>
       <a href="Gallery.html"> GALLERY </a>
     </nav>
-</footer>
+  </footer>
 </html>

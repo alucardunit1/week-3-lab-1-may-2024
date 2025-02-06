@@ -2,6 +2,92 @@
   <head>
     <title>Learning CSS</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      html {
+  height: 100%;
+  width: 100%;
+}
+* {
+  margin: 1;
+  padding: 0;
+  box-sizing: content-box;
+  color: chocolate;
+}
+
+header,
+footer,
+main {
+  padding: 1px;
+}
+
+h1 {
+  color: red;
+}
+
+p {
+  margin: 32px;
+  background-color: antiquewhite;
+}
+
+button {
+  color: black;
+  box-shadow: inset;
+}
+
+.paragraph-1 {
+  background-color: pink;
+  margin: 1%;
+  padding: 10px;
+}
+
+ul {
+  padding: 1%;
+}
+table {
+  border: 3px;
+}
+
+.potato {
+  color: green;
+}
+th,
+td {
+  padding: 5px;
+  border: 2px solid black;
+}
+
+nav {
+  background-color: #8f0c0c98;
+  float: left;
+  position: sticky;
+  bottom: 0px;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 14px;
+  text-wrap: 1px;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 34%;
+}
+
+.listone {
+  padding: 5%;
+  border: 1px solid black;
+}
+
+    </style>
   </head>
   <body>
     <header>
@@ -16,7 +102,7 @@
         pulvinar <strong>mattis</strong> nunc. Enim blandit volutpat maecenas volutpat blandit
         aliquam etiam.    
       </p>
-      <ul>
+      <ul class="listone">
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>

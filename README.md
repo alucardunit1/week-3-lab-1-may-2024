@@ -50,7 +50,7 @@ You will start with an HTML document that needs style. There are several ways to
 - [x] Style header, main and footer
 - [x] Style a table with borders
 - [x] Style an element with a class
-- [ ] Create your own class and apply it to an element
+- [x] Create your own class and apply it to an element
 
 
 ## Contact
